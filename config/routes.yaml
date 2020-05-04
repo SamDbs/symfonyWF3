@@ -1,4 +1,4 @@
-index:
+home:
     path: /
     controller: App\Controller\DefaultController::indexAction
 
@@ -6,3 +6,8 @@ index:
 about:
     path: /about
     controller: App\Controller\DefaultController::aboutAction
+
+
+route_name:
+    path: /name/{name}
+    controller: App\Controller\DefaultController::nameAction
