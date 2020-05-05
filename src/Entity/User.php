@@ -19,26 +19,31 @@ class User
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $user;
+    private $name;
 
     /**
      * @ORM\Column(type="integer")
      */
     private $age;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $gender;
+
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getUser(): ?string
+    public function getName(): ?string
     {
-        return $this->user;
+        return $this->name;
     }
 
-    public function setUser(string $user): self
+    public function setName(string $name): self
     {
-        $this->user = $user;
+        $this->name = $name;
 
         return $this;
     }
@@ -51,6 +56,18 @@ class User
     public function setAge(int $age): self
     {
         $this->age = $age;
+
+        return $this;
+    }
+
+    public function getGender(): ?string
+    {
+        return $this->gender;
+    }
+
+    public function setGender(string $gender): self
+    {
+        $this->gender = $gender;
 
         return $this;
     }
